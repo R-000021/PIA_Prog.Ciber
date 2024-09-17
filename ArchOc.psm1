@@ -20,9 +20,9 @@ C:\Ruta\De\Acceso\archivo.txt
 
 
 # funcion para obtener los archivos ocultos 
-function Get-HiddenFiles {
+function GHiddenFiles {
     param (
-        [string]$Pathh
+        [string]$Pathh = "C:\Users\AbrahamEstudillo\PIA" 
     )
     Get-ChildItem -Path $Pathh -Force -File | Where-Object { $_.Attributes -match "Hidden" }
 
@@ -53,4 +53,4 @@ function Get-HiddenFiles {
 $Path = Read-Host "Por favor, ingrese la ruta de la carpeta donde desea buscar archivos ocultos"
 
 # Llamamos a la funcion diciendole que la variable Path corresponde al valor Pathh de la funcion
-Get-HiddenFiles -Pathh $Path
+Hidden_Files -Pathh $Path

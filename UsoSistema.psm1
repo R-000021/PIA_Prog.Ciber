@@ -146,3 +146,11 @@ function network_usage {
         Write-Host "ALERTA: El uso de la red está por encima del $NETWORK_THRESHOLD KB/s" -ForegroundColor Red
     }
 }
+
+function System_Results{
+cpu_usage
+memory_usage
+disk_usage
+network_usage
+
+}
